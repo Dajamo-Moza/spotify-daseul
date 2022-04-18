@@ -1,6 +1,6 @@
 import { getData } from "./fetchData";
 
-export const getRecentReleaseAlbums = () =>
+export const getRecentReleaseAlbums = async () =>
   getData("get", "/browse/new-releases", {
     params: {
       country: "KR",

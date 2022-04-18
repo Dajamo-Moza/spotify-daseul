@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { AiOutlineHeart, AiOutlinePlus } from "react-icons/ai";
+import { getRecentReleaseAlbums } from "../utils/APIcontrols";
 
 export default function ChartList() {
+  useEffect(() => {
+    getRecentReleaseAlbums().then((res) => console.log(res));
+  }, []);
   return (
     <Container>
       <AlbumImgContainer>
