@@ -22,6 +22,7 @@ ${reset}
   font-weight:600;
   font-size: 10px;
   background-color:#1DB954;
+  height:100vh;
 
   }
   

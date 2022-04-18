@@ -18,6 +18,6 @@ export default MyApp;
 
 const Container = styled.section`
   ${({ theme }) => theme.flexbox()}
-  margin-top:5.0rem;
-  background-color: yellow;
+  padding:7.0rem 0;
+  height: 100vh;
 `;
