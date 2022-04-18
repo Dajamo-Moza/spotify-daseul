@@ -35,8 +35,8 @@ const Container = styled.div`
 `;
 
 const AlbumImgContainer = styled.div`
-  border-right: 1px solid black;
   padding: 0 1.5rem;
+  border-right: 1px solid black;
 `;
 
 const AlbumImg = styled.img`
@@ -46,8 +46,8 @@ const AlbumImg = styled.img`
 const AlbumInfoContainer = styled.div`
   ${({ theme }) => theme.flexbox("row", "flex-start", "flex-start")}
   width: 100%;
-  margin: 0 2rem;
   height: 9rem;
+  margin: 0 2rem;
   border-bottom: 1px solid black;
 `;
 
@@ -56,8 +56,8 @@ const AlbumTitleContainer = styled.div`
 `;
 
 const Ranking = styled.p`
-  font-size: 6rem;
   margin: 0 1rem;
+  font-size: 6rem;
 `;
 
 const AlbumContents = styled.div`
@@ -67,8 +67,8 @@ const AlbumContents = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 1.6rem;
   margin-bottom: 0.3rem;
+  font-size: 1.6rem;
 `;
 
 const Singer = styled.p`

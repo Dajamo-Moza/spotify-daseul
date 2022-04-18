@@ -5,19 +5,20 @@ import { AiOutlineSearch } from "react-icons/ai";
 export default function SearchBar() {
   return (
     <Container>
-      <SearchInput></SearchInput>
+      <SearchInput />
       <AiOutlineSearch size={15} />
     </Container>
   );
 }
 
 const Container = styled.div`
-  border-bottom: 1px solid black;
+  ${({ theme }) => theme.flexbox()}
   width: 100%;
+  border-bottom: 1px solid black;
 `;
 
 const SearchInput = styled.input`
+  padding: 0.5rem 0.3rem;
   font-size: 1.3rem;
   font-weight: 600;
-  padding: 0.5rem 0.3rem;
 `;

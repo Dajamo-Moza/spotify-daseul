@@ -15,14 +15,14 @@ export default function SideBar() {
 const Container = styled.div`
   ${({ theme }) => theme.flexbox("column", "flex-start", "flex-start")}
   height: 100%;
+  padding: 0 1.8rem;
   border-left: 1px solid black;
   border-right: 1px solid black;
-  padding: 0 1.8rem;
 `;
 
 const SideBarMenuBtn = styled.button`
+  margin-bottom: 6rem;
   font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 6rem;
   cursor: pointer;
 `;
