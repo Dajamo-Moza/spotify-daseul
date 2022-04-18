@@ -1,5 +1,19 @@
+const flexbox = (direction = "row", justify = "center", align = "center") => {
+  return `
+  display: flex;
+  justify-content: ${justify};
+  align-items: ${align};
+  flex-direction: ${direction};
+  `;
+};
+
+const colors = {
+  white: "#FFFFFF",
+  black: "#191414",
+  mainColor: "1DB954",
+};
+
 export const theme = {
-  colors: {
-    black: "#00000",
-  },
+  colors,
+  flexbox,
 };
