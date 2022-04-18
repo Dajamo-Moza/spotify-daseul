@@ -19,7 +19,7 @@ ${reset}
 :root{
     font-size: 10px;
     font-family:'Inter';
-  font-weight:600;
+  font-weight:900;
   font-size: 10px;
   background-color:#1DB954;
   height:100vh;
