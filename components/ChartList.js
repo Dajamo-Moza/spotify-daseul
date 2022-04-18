@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { AiOutlineHeart, AiOutlinePlus } from "react-icons/ai";
 
 export default function ChartList() {
   return (
@@ -18,12 +16,12 @@ export default function ChartList() {
             <Singer>Lauv</Singer>
           </AlbumTitleContainer>
           <ButtonContainer>
-            <AddBtn>
-              <FontAwesomeIcon icon={faPlus} size="2x" />
-            </AddBtn>
-            <SaveBtn>
-              <FontAwesomeIcon icon={faHeart} size="2x" />
-            </SaveBtn>
+            <AddLikeBtn>
+              <AiOutlinePlus size={20} />
+            </AddLikeBtn>
+            <AddLikeBtn>
+              <AiOutlineHeart size={20} />
+            </AddLikeBtn>
           </ButtonContainer>
         </AlbumContents>
       </AlbumInfoContainer>
@@ -81,6 +79,7 @@ const ButtonContainer = styled.div`
   margin-top: 1rem;
 `;
 
-const AddBtn = styled.button``;
-
-const SaveBtn = styled.button``;
+const AddLikeBtn = styled.button`
+  padding-left: 1rem;
+  cursor: pointer;
+`;
