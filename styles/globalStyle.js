@@ -13,17 +13,18 @@ ${reset}
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 :root{
     font-size: 10px;
+    font-family:'Inter';
+  font-weight:600;
+  font-size: 10px;
+  background-color:#1DB954;
+
   }
   
-
-body {
-  font-family:'Inter';
-  font-weight:600;
-}
 
 button,
 input {
