@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
 export default MyApp;
 
 const Container = styled.section`
-  ${({ theme }) => theme.flexbox()}
+  ${({ theme }) => theme.flexbox("row", "center", "flex-start")}
   padding:7.0rem 0;
   height: 100vh;
 `;
