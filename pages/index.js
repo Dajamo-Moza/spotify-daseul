@@ -3,10 +3,11 @@ import Image from "next/image";
 import styled from "styled-components";
 
 export default function Home() {
-  return <Container>하이</Container>;
+  return <Container>Spotify Music</Container>;
 }
 
 const Container = styled.div`
   color: red;
   background-color: yellow;
+  font-size: 5.6rem;
 `;

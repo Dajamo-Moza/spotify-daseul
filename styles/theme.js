@@ -10,7 +10,7 @@ const flexbox = (direction = "row", justify = "center", align = "center") => {
 const colors = {
   white: "#FFFFFF",
   black: "#191414",
-  mainColor: "1DB954",
+  mainColor: "#DB954",
 };
 
 export const theme = {
