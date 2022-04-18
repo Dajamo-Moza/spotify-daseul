@@ -1,11 +1,13 @@
-import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
+import ChartList from "../components/ChartList";
+import SideBar from "../components/SideBar";
 
 export default function Home() {
-  return <Container>Spotify Music</Container>;
+  return (
+    <Container>
+      <ChartList />
+    </Container>
+  );
 }
 
-const Container = styled.div`
-  font-size: 5.6rem;
-`;
+const Container = styled.div``;
