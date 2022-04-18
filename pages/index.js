@@ -7,7 +7,5 @@ export default function Home() {
 }
 
 const Container = styled.div`
-  color: red;
-  background-color: yellow;
   font-size: 5.6rem;
 `;

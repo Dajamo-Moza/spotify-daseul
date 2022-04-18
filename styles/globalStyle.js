@@ -6,14 +6,7 @@ ${reset}
 
 @font-face {
   font-family:"Inter";
-  weight: 500;
   src: url("./public/font/Inter-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family:"Inter";
-  font-weight: 600;
-  src: url("./public/font/Inter-SemiBold.ttf") format("truetype");
 }
 
 * {
@@ -22,7 +15,6 @@ ${reset}
   padding: 0;
 }
 
-
 :root{
     font-size: 10px;
   }
@@ -30,7 +22,7 @@ ${reset}
 
 body {
   font-family:'Inter';
-  font-weight:500;
+  font-weight:600;
 }
 
 button,
