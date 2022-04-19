@@ -5,17 +5,19 @@ import { AiOutlineHeart, AiOutlineEllipsis } from "react-icons/ai";
 export default function TrackLists() {
   return (
     <Container>
-      <AlbumImg src="https://image.bugsm.co.kr/album/images/500/6018/601856.jpg"></AlbumImg>
+      <AlbumImg src="https://image.bugsm.co.kr/album/images/500/6018/601856.jpg" />
       <TrackListContainer>
-        <TrackTitle>Track 1 Angel 2 me</TrackTitle>
-        <LikeOpenBtn>
-          <LikeBtn>
-            <AiOutlineEllipsis size={20} />
-          </LikeBtn>
-          <OpenBtn>
-            <AiOutlineHeart size={20} />
-          </OpenBtn>
-        </LikeOpenBtn>
+        <TrackListContents>
+          <TrackTitle>Track 1 Angel 2 me</TrackTitle>
+          <LikeOpenBtn>
+            <LikeBtn>
+              <AiOutlineEllipsis size={20} />
+            </LikeBtn>
+            <OpenBtn>
+              <AiOutlineHeart size={20} />
+            </OpenBtn>
+          </LikeOpenBtn>
+        </TrackListContents>
       </TrackListContainer>
     </Container>
   );
@@ -31,11 +33,15 @@ const AlbumImg = styled.img`
 `;
 
 const TrackListContainer = styled.div`
-  ${({ theme }) => theme.flexbox("row", "space-between", "flex-start")}
-  border-bottom:1px solid black;
+  /* ${({ theme }) => theme.flexbox("row", "space-between", "flex-start")} */
+  border-bottom: 1px solid black;
   width: 100%;
   margin: 0 2rem;
   padding: 0.5rem;
+`;
+
+const TrackListContents = styled.div`
+  ${({ theme }) => theme.flexbox("row", "space-between", "flex-start")}
 `;
 
 const TrackTitle = styled.p`
