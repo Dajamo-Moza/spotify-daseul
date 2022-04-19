@@ -18,6 +18,28 @@ export default function TrackLists() {
             </OpenBtn>
           </LikeOpenBtn>
         </TrackListContents>
+        <TrackListContents>
+          <TrackTitle>Track 1 Angel 2 me</TrackTitle>
+          <LikeOpenBtn>
+            <LikeBtn>
+              <AiOutlineEllipsis size={20} />
+            </LikeBtn>
+            <OpenBtn>
+              <AiOutlineHeart size={20} />
+            </OpenBtn>
+          </LikeOpenBtn>
+        </TrackListContents>
+        <TrackListContents>
+          <TrackTitle>Track 1 Angel 2 me</TrackTitle>
+          <LikeOpenBtn>
+            <LikeBtn>
+              <AiOutlineEllipsis size={20} />
+            </LikeBtn>
+            <OpenBtn>
+              <AiOutlineHeart size={20} />
+            </OpenBtn>
+          </LikeOpenBtn>
+        </TrackListContents>
       </TrackListContainer>
     </Container>
   );
@@ -25,23 +47,25 @@ export default function TrackLists() {
 
 const Container = styled.div`
   ${({ theme }) => theme.flexbox("row", "flex-start", "flex-start")}
-  margin: 2.5rem 0;
+  margin: 2rem 0;
 `;
 
 const AlbumImg = styled.img`
   width: 30rem;
+  padding: 1.5rem;
 `;
 
 const TrackListContainer = styled.div`
-  /* ${({ theme }) => theme.flexbox("row", "space-between", "flex-start")} */
-  border-bottom: 1px solid black;
   width: 100%;
   margin: 0 2rem;
-  padding: 0.5rem;
 `;
 
 const TrackListContents = styled.div`
   ${({ theme }) => theme.flexbox("row", "space-between", "flex-start")}
+  border-bottom: 1px solid black;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
 `;
 
 const TrackTitle = styled.p`
