@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import ChartList from "../components/ChartList";
-import SideBar from "../components/SideBar";
+import Chart from "../components/Chart";
 
 export default function Home() {
   return (
     <Container>
-      <ChartList />
+      <Chart />
     </Container>
   );
 }

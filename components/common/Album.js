@@ -1,19 +1,21 @@
 import React from "react";
-import styled from "styled-components";
 import { AiOutlineHeart, AiOutlinePlus } from "react-icons/ai";
+import styled from "styled-components";
 
-export default function ChartList() {
+export default function Album({ albumInfo, rank }) {
+  const { name, artists, images } = albumInfo;
+
   return (
     <Container>
       <AlbumImgContainer>
-        <AlbumImg src="https://image.yes24.com/goods/42764004/XL" />
+        <AlbumImg src={images[1].url} />
       </AlbumImgContainer>
       <AlbumInfoContainer>
-        <Ranking>1</Ranking>
+        <Ranking>{rank}</Ranking>
         <AlbumContents>
           <AlbumTitleContainer>
-            <Title>All 4 Nothing</Title>
-            <Singer>Lauv</Singer>
+            <Title>{name}</Title>
+            <Singer>{artists[0].name}</Singer>
           </AlbumTitleContainer>
           <ButtonContainer>
             <AddLikeBtn>
@@ -53,6 +55,7 @@ const AlbumInfoContainer = styled.div`
 
 const AlbumTitleContainer = styled.div`
   margin-top: 1rem;
+  cursor: pointer;
 `;
 
 const Ranking = styled.p`
