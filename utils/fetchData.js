@@ -2,9 +2,9 @@ import axios from "axios";
 
 export const getData = async (method, url, config) => {
   const instance = axios.create({
-    baseURL: process.env.SERVER,
+    baseURL: process.env.NEXT_PUBLIC_SERVER,
     headers: {
-      Authorization: `Bearer ${process.env.API_KEY}`,
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
     },
   });
   try {

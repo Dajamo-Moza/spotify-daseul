@@ -7,6 +7,7 @@ export default function ChartList() {
   useEffect(() => {
     getRecentReleaseAlbums().then((res) => console.log(res));
   }, []);
+
   return (
     <Container>
       <AlbumImgContainer>
