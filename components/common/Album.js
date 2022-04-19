@@ -1,33 +1,37 @@
 import React from "react";
 import { AiOutlineHeart, AiOutlinePlus } from "react-icons/ai";
 import styled from "styled-components";
+import TrackLists from "./TrackLists";
 
 export default function Album({ albumInfo, rank }) {
   const { name, artists, images } = albumInfo;
 
   return (
-    <Container>
-      <AlbumImgContainer>
-        <AlbumImg src={images[1].url} />
-      </AlbumImgContainer>
-      <AlbumInfoContainer>
-        <Ranking>{rank}</Ranking>
-        <AlbumContents>
-          <AlbumTitleContainer>
-            <Title>{name}</Title>
-            <Singer>{artists[0].name}</Singer>
-          </AlbumTitleContainer>
-          <ButtonContainer>
-            <AddLikeBtn>
-              <AiOutlinePlus size={20} />
-            </AddLikeBtn>
-            <AddLikeBtn>
-              <AiOutlineHeart size={20} />
-            </AddLikeBtn>
-          </ButtonContainer>
-        </AlbumContents>
-      </AlbumInfoContainer>
-    </Container>
+    <>
+      <Container>
+        <AlbumImgContainer>
+          <AlbumImg src={images[1].url} />
+        </AlbumImgContainer>
+        <AlbumInfoContainer>
+          <Ranking>{rank}</Ranking>
+          <AlbumContents>
+            <AlbumTitleContainer>
+              <Title>{name}</Title>
+              <Singer>{artists[0].name}</Singer>
+            </AlbumTitleContainer>
+            <ButtonContainer>
+              <AddLikeBtn>
+                <AiOutlinePlus size={20} />
+              </AddLikeBtn>
+              <AddLikeBtn>
+                <AiOutlineHeart size={20} />
+              </AddLikeBtn>
+            </ButtonContainer>
+          </AlbumContents>
+        </AlbumInfoContainer>
+      </Container>
+      <TrackLists />
+    </>
   );
 }
 
