@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export default function Album({ albumInfo, rank }) {
   const { name, artists, images } = albumInfo;
-  console.log(albumInfo);
+
   return (
     <Container>
       <AlbumImgContainer>
@@ -55,6 +55,7 @@ const AlbumInfoContainer = styled.div`
 
 const AlbumTitleContainer = styled.div`
   margin-top: 1rem;
+  cursor: pointer;
 `;
 
 const Ranking = styled.p`

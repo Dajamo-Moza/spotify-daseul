@@ -11,7 +11,6 @@ export const getData = async (method, url, config) => {
     const res = await instance[method](url, config);
     return res;
   } catch (error) {
-    // throw new Error(error);
     console.log(error);
   }
 };
