@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { AiOutlineHeart, AiOutlinePlus } from "react-icons/ai";
 import { getRecentReleaseAlbums } from "../utils/APIcontrols";
 
 export default function ChartList() {
+  const [albumList, setAlbumList] = useState([]);
+
   useEffect(() => {
-    getRecentReleaseAlbums().then((res) => console.log(res));
+    getRecentReleaseAlbums().then((res) => setAlbumList(res.data.albums.items));
   }, []);
 
   return (
