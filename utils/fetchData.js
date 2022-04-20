@@ -1,8 +1,9 @@
 import axios from "axios";
 
-export const getData = async (method, url, config) => {
+export const fetchData = async (method, url, config) => {
   const instance = axios.create({
     baseURL: process.env.NEXT_PUBLIC_SERVER,
+    timeout: 1000,
     headers: {
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
     },
