@@ -1,7 +1,7 @@
-import { getData } from "./fetchData";
+import { fetchData } from "./fetchData";
 
 export const getRecentReleaseAlbums = async () =>
-  getData("get", "/browse/new-releases", {
+  fetchData("get", "/browse/new-releases", {
     params: {
       country: "KR",
       limit: 20,
@@ -9,7 +9,7 @@ export const getRecentReleaseAlbums = async () =>
   });
 
 export const getAlbumTracks = async (id) =>
-  getData("get", `/albums/${id}`, {
+  fetchData("get", `/albums/${id}`, {
     params: {
       market: "KR",
     },
