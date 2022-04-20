@@ -9,7 +9,7 @@ export const getRecentReleaseAlbums = async () =>
   });
 
 export const getAlbumTracks = async (id) =>
-  getData("get", `/${id}`, {
+  getData("get", `/albums/${id}`, {
     params: {
       market: "KR",
     },

@@ -2,44 +2,26 @@ import React from "react";
 import styled from "styled-components";
 import { AiOutlineHeart, AiOutlineEllipsis } from "react-icons/ai";
 
-export default function TrackLists() {
+export default function TrackLists({ trackList }) {
   return (
     <Container>
       <AlbumImg src="https://image.bugsm.co.kr/album/images/500/6018/601856.jpg" />
       <TrackListContainer>
-        <TrackListContents>
-          <TrackTitle>Track 1 Angel 2 me</TrackTitle>
-          <LikeOpenBtn>
-            <LikeBtn>
-              <AiOutlineEllipsis size={20} />
-            </LikeBtn>
-            <OpenBtn>
-              <AiOutlineHeart size={20} />
-            </OpenBtn>
-          </LikeOpenBtn>
-        </TrackListContents>
-        <TrackListContents>
-          <TrackTitle>Track 1 Angel 2 me</TrackTitle>
-          <LikeOpenBtn>
-            <LikeBtn>
-              <AiOutlineEllipsis size={20} />
-            </LikeBtn>
-            <OpenBtn>
-              <AiOutlineHeart size={20} />
-            </OpenBtn>
-          </LikeOpenBtn>
-        </TrackListContents>
-        <TrackListContents>
-          <TrackTitle>Track 1 Angel 2 me</TrackTitle>
-          <LikeOpenBtn>
-            <LikeBtn>
-              <AiOutlineEllipsis size={20} />
-            </LikeBtn>
-            <OpenBtn>
-              <AiOutlineHeart size={20} />
-            </OpenBtn>
-          </LikeOpenBtn>
-        </TrackListContents>
+        {trackList.map((track, index) => (
+          <TrackListContents key={track.id}>
+            <TrackTitle>
+              Track {index + 1} | {track.name}
+            </TrackTitle>
+            <LikeOpenBtn>
+              <LikeBtn>
+                <AiOutlineEllipsis size={20} />
+              </LikeBtn>
+              <OpenBtn>
+                <AiOutlineHeart size={20} />
+              </OpenBtn>
+            </LikeOpenBtn>
+          </TrackListContents>
+        ))}
       </TrackListContainer>
     </Container>
   );

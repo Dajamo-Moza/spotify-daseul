@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineHeart, AiOutlinePlus } from "react-icons/ai";
 import styled from "styled-components";
+import { getAlbumTracks } from "../../utils/APIcontrols";
 import TrackLists from "./TrackLists";
 
 export default function Album({ albumInfo, rank }) {
-  const { name, artists, images } = albumInfo;
+  const { id, name, artists, images } = albumInfo;
+  const [trackList, setTrackList] = useState([]);
+
+  useEffect(() => {
+    getAlbumTracks(id).then((res) => setTrackList(res.data.tracks.items));
+  }, []);
 
   return (
     <>
@@ -30,7 +36,7 @@ export default function Album({ albumInfo, rank }) {
           </AlbumContents>
         </AlbumInfoContainer>
       </Container>
-      <TrackLists />
+      <TrackLists trackList={trackList} />
     </>
   );
 }
