@@ -9,9 +9,10 @@ export default function Album({ albumInfo, rank }) {
   const [trackList, setTrackList] = useState([]);
 
   useEffect(() => {
-    getAlbumTracks(id).then((res) => setTrackList(res.data.tracks.items));
+    getAlbumTracks(id).then((res) => setTrackList(res.data));
   }, []);
 
+  console.log(trackList);
   return (
     <>
       <Container>
@@ -36,7 +37,10 @@ export default function Album({ albumInfo, rank }) {
           </AlbumContents>
         </AlbumInfoContainer>
       </Container>
-      <TrackLists trackList={trackList} />
+      <TrackLists
+        albumImg={trackList.images[1].url}
+        trackList={trackList.tracks?.items}
+      />
     </>
   );
 }

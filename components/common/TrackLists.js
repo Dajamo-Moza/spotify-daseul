@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { AiOutlineHeart, AiOutlineEllipsis } from "react-icons/ai";
 
-export default function TrackLists({ trackList }) {
+export default function TrackLists({ trackList, albumImg }) {
   return (
     <Container>
-      <AlbumImg src="https://image.bugsm.co.kr/album/images/500/6018/601856.jpg" />
+      <AlbumImg src={albumImg} />
       <TrackListContainer>
-        {trackList.map((track, index) => (
+        {trackList?.map((track, index) => (
           <TrackListContents key={track.id}>
             <TrackTitle>
               Track {index + 1} | {track.name}
