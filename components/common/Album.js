@@ -38,7 +38,7 @@ export default function Album({ albumInfo, rank }) {
         </AlbumInfoContainer>
       </Container>
       <TrackLists
-        albumImg={trackList.images[1].url}
+        albumImg={trackList.images && trackList.images[1].url}
         trackList={trackList.tracks?.items}
       />
     </>
