@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { getAlbumTracks } from "../../utils/APIcontrols";
 import TrackLists from "./TrackLists";
 
-export default function Album({ albumInfo, rank }) {
-  const { id, name, artists, images } = albumInfo;
+export default function Album({ albumInfo, rank, toggleAlbumOpen }) {
+  const { id, name, artists, images, isOpen } = albumInfo;
   const [trackList, setTrackList] = useState([]);
 
   useEffect(() => {
@@ -14,10 +14,12 @@ export default function Album({ albumInfo, rank }) {
 
   return (
     <>
-      <Container>
-        <AlbumImgContainer>
-          <AlbumImg src={images[1].url} />
-        </AlbumImgContainer>
+      <Container onClick={() => toggleAlbumOpen(id)}>
+        {!isOpen && (
+          <AlbumImgContainer>
+            <AlbumImg src={images[1].url} />
+          </AlbumImgContainer>
+        )}
         <AlbumInfoContainer>
           <Ranking>{rank}</Ranking>
           <AlbumContents>
@@ -36,10 +38,12 @@ export default function Album({ albumInfo, rank }) {
           </AlbumContents>
         </AlbumInfoContainer>
       </Container>
-      <TrackLists
-        albumImg={trackList.images && trackList.images[1].url}
-        trackList={trackList.tracks?.items}
-      />
+      {isOpen && (
+        <TrackLists
+          albumImg={trackList.images && trackList.images[1].url}
+          trackList={trackList.tracks?.items}
+        />
+      )}
     </>
   );
 }
@@ -47,6 +51,7 @@ export default function Album({ albumInfo, rank }) {
 const Container = styled.div`
   ${({ theme }) => theme.flexbox("row", "flex-start", "flex-start")}
   width:70vw;
+  margin-bottom: 1rem;
 `;
 
 const AlbumImgContainer = styled.div`

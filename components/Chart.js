@@ -15,12 +15,23 @@ export default function Chart() {
     );
   }, []);
 
-  console.log("albumList", albumList);
+  const toggleAlbumOpen = (albumId) => {
+    setAlbumList(
+      albumList.map((album) =>
+        album.id === albumId ? { ...album, isOpen: !album.isOpen } : album
+      )
+    );
+  };
 
   return (
     <>
       {albumList.map((album, index) => (
-        <Album key={album.id} albumInfo={album} rank={index + 1} />
+        <Album
+          key={album.id}
+          toggleAlbumOpen={toggleAlbumOpen}
+          albumInfo={album}
+          rank={index + 1}
+        />
       ))}
     </>
   );
