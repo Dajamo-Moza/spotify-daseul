@@ -6,8 +6,16 @@ export default function Chart() {
   const [albumList, setAlbumList] = useState([]);
 
   useEffect(() => {
-    getRecentReleaseAlbums().then((res) => setAlbumList(res.data.albums.items));
+    getRecentReleaseAlbums().then((res) =>
+      setAlbumList(
+        res.data.albums.items.map((album) => {
+          return { ...album, isOpen: false };
+        })
+      )
+    );
   }, []);
+
+  console.log("albumList", albumList);
 
   return (
     <>

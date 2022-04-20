@@ -12,7 +12,6 @@ export default function Album({ albumInfo, rank }) {
     getAlbumTracks(id).then((res) => setTrackList(res.data));
   }, []);
 
-  console.log(trackList);
   return (
     <>
       <Container>
