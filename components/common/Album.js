@@ -2,9 +2,15 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineHeart, AiOutlinePlus } from "react-icons/ai";
 import styled from "styled-components";
 import { getAlbumTracks } from "../../utils/APIcontrols";
+import Loading from "./Loading";
 import TrackLists from "./TrackLists";
 
-export default function Album({ albumInfo, rank, toggleAlbumOpen }) {
+export default function Album({
+  albumInfo,
+  rank,
+  toggleAlbumOpen,
+  setLoading,
+}) {
   const { id, name, artists, images, isOpen } = albumInfo;
   const [trackList, setTrackList] = useState([]);
 
